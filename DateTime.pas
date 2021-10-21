@@ -16,7 +16,13 @@ begin
   end;
 end;
 
+function SecondsInMinute(x:integer):integer;
+begin
+  result:=60;
+end;
+
 begin
   print('Год високосный');
-  print(IsLeapYear(2000));
+  println(IsLeapYear(2000));
+  print('В минуте',SecondsInMinute(1),'секунд');
 end.
