@@ -52,11 +52,17 @@ begin
   result:=sum;
 end;
 
+function SeconsInHours(x:integer):integer;
+begin
+  result:=x*60*60;
+end;
+
 
 
 begin
   print('Год високосный');
   println(IsLeapYear(2000));
   println('В минуте',SecondsInMinute(1),'секунд');
-  print(DaysInYearRange(2014,2050));
+  println(DaysInYearRange(2014,2050));
+  println(SeconsInHours(1));
 end.
