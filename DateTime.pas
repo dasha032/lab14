@@ -21,6 +21,15 @@ begin
   result:=60;
 end;
 
+function LaterInYear(x,y:integer):integer;
+begin
+ if x>y then
+   result:=x
+ else 
+   result:=y;
+ 
+end;
+
 begin
   print('Год високосный');
   println(IsLeapYear(2000));
