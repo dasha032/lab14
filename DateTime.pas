@@ -39,11 +39,24 @@ begin
   else
     result:=365;
 end;
+function DaysInYearRange(x,y:integer):integer;
+begin
+  var sum:=0;
+  for var i:=x to y do
+  begin
+    if IsLeapYear(i) then
+      sum+=366
+    else
+      sum+=365;
+  end;
+  result:=sum;
+end;
 
 
 
 begin
   print('Год високосный');
   println(IsLeapYear(2000));
-  print('В минуте',SecondsInMinute(1),'секунд');
+  println('В минуте',SecondsInMinute(1),'секунд');
+  print(DaysInYearRange(2014,2050));
 end.
