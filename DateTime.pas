@@ -30,6 +30,18 @@ begin
  
 end;
 
+function DaysInYear(x:integer):integer;
+begin
+  if IsLeapYear(x) then
+  begin
+    result:=366;
+  end
+  else
+    result:=365;
+end;
+
+
+
 begin
   print('Год високосный');
   println(IsLeapYear(2000));
